@@ -13,33 +13,30 @@ It extracts `.mp3` chapter links from a given audiobook page and downloads them 
 
 ---
 
-## **🚀 How to Use**  
+## **🚀 How to Use**
 
-### **1️⃣ Install Requirements**  
-Make sure you have Python **3.12+** installed. Then, install dependencies:  
-```sh
-pip install requests beautifulsoup4 tqdm
-```
+### **1️⃣ Run the Script**  
 
-### **2️⃣ Update `book_url`**  
-In `main.py`, replace the URL with the **audiobook page URL** from TokyoBook:  
-```python
-book_url = "https://tokybook.com/providence-the-beginning-after-the-end-book-11"
-```
-
-### **3️⃣ Run the Script**  
 Simply execute the script:  
 ```sh
-python main.py
+./download_book url
 ```
+For example:
+```sh
+./download_book https://tokybook.com/providence-the-beginning-after-the-end-book-11
+```
+
 The chapters will be downloaded into a **folder named after the audiobook**.
 
 ---
 
 ## **🔍 How It Works**
-1. **Scrapes the audiobook page** to get the book title and chapter links.  
-2. **Creates a folder** named after the audiobook.  
-3. **Downloads each chapter** as an `.mp3` file with a progress bar.  
+1. **Automatically deactivates existing venv**, creates a new one and installs all requirements.
+2. **Scrapes the audiobook page** to get the book title and chapter links.  
+3. **Creates a folder** named after the audiobook.  
+4. **Downloads each chapter** as an `.mp3` file with a progress bar.
+5. **Retries chapters 30 times** when chapter fails to download.
+6. **Deactivates** created venv.  
 
 ---
 
@@ -53,3 +50,4 @@ The chapters will be downloaded into a **folder named after the audiobook**.
 
 ### **👨‍💻 Author**  
 Developed with ❤️ using Python. Contributions and suggestions are welcome!  
+Further fiddled with by Risac.
