@@ -15,7 +15,12 @@ It extracts `.mp3` chapter links from a given audiobook page and downloads them 
 
 ## **🚀 How to Use**
 
-### **1️⃣ Run the Script**  
+### **1️⃣ Chmod script**
+After cloning the repo, make the script executable:
+```bash
+chmod +x download_book.sh
+```
+### **2️⃣ Run the Script**  
 
 Simply execute the script:  
 ```sh
